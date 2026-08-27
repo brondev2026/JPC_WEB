@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/JPC_logo.jpg">
+    <title>Joy Prints & Crafts</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <img src="images/JPC_logo.jpg" alt="Joy Prints & Crafts Logo" class="logo-image">
+                <span>Joy Prints & Crafts</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#products">Products</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="darkModeBtn" class="icon-btn">🌙</button>
+                <button id="menuBtn" class="menu-btn">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- =========================
+         HERO
+    ========================= -->
+    <section id="home" class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="hero-badge">Quality Printing Services</span>
+                <h1>Print Your Vision. <span>Make It Beautiful.</span></h1>
+                <p>Customized printing products made for businesses, events, schools, organizations, and special occasions.</p>
+                <div class="hero-buttons">
+                    <a href="#products" class="btn btn-primary">Browse Products →</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Us</a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <div class="hero-card">
+                <img src="images/JPC_logo.jpg" alt="Joy Prints & Crafts Logo" class="hero-card-logo">
+                <p>Quality • Creative • Reliable</p>
+            </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================
+         FEATURED PRODUCTS
+    ========================= -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <span class="section-label">OUR SERVICES</span>
+                    <h2>What We Print</h2>
+                </div>
+                <p>Explore some of our most popular printing products.</p>
+            </div>
+
+             <div class="featured-grid">
+            <!-- Card 1: ID/PVC Cards -->
+            <div class="feature-card feature-card-id">
+                <div class="feature-icon">🪪</div>
+                <h3>ID / PVC Cards / Lace</h3>
+                <p>Professional customized IDs.</p>
+                <span class="feature-tag">Popular</span>
+            </div>
+
+            <!-- Card 2: Trophy -->
+            <div class="feature-card feature-card-trophy">
+                <div class="feature-icon">🎨</div>
+                <h3>Trophy</h3>
+                <p>Custom trophies for any occasion.</p>
+                <span class="feature-tag">Best Seller</span>
+            </div>
+
+            <!-- Card 3: T-Shirts -->
+            <div class="feature-card feature-card-apparel">
+                <div class="feature-icon">👕</div>
+                <h3>T-Shirts</h3>
+                <p>Customized shirts and apparel.</p>
+                <span class="feature-tag">Trending</span>
+            </div>
+
+            <!-- Card 4: Souvenirs -->
+            <div class="feature-card feature-card-souvenirs">
+                <div class="feature-icon">🎁</div>
+                <h3>Souvenirs</h3>
+                <p>Personalized gifts and souvenirs.</p>
+                <span class="feature-tag">Gift Ready</span>
+            </div>
+
+            <!-- Card 5: Invitations -->
+            <div class="feature-card feature-card-invitations">
+                <div class="feature-icon">🎁</div>
+                <h3>Invitations</h3>
+                <p>Custom invitations for your special events.</p>
+                <span class="feature-tag">Event Ready</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================
+         PRODUCTS
+    ========================= -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-label">OUR PRODUCTS</span>
+                <p>Find the perfect printing product for your needs.</p>
+            </div>
+
+            <!-- SEARCH -->
+            <div class="product-tools">
+                <div class="search-box">
+                    <span>🔎</span>
+                    <input type="text" id="searchInput" placeholder="Search products...">
+                </div>
+            </div>
+
+            <!-- CATEGORY -->
+            <div class="categories">
+                <button class="category-btn active" data-category="All">All</button>
+                <button class="category-btn" data-category="ID Products">🪪 ID / PVC / LACE</button>
+                <button class="category-btn" data-category="Stickers">🎨 Stickers</button>
+                <button class="category-btn" data-category="Apparel">👕 T-Shirts</button>
+                <button class="category-btn" data-category="Labels">🏷️ Labels</button>
+                <button class="category-btn" data-category="Souvenirs">🧲 Souvenirs</button>
+            </div>
+
+            <!-- PRODUCT GRID -->
+            <div id="productGrid" class="product-grid"></div>
+        </div>
+    </section>
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+    <section id="contact" class="contact-section">
+        <div class="container contact-container">
+            <div class="contact-content">
+                <span class="section-label">GET IN TOUCH</span>
+                <h2>Have a project in mind?</h2>
+                <p>Send us your design or tell us what you need. We'll be happy to help you with your printing project.</p>
+                <div class="contact-buttons">
+                    <a href="#" class="contact-btn">💬 Messenger</a>
+                    <a href="#" class="contact-btn">📘 Facebook</a>
+                    <a href="tel:+639000000000" class="contact-btn">📞 Call Us</a>
+                </div>
+            </div>
+
+            <div class="contact-info">
+                <div class="info-item">
+                    <span>📍</span>
+                    <div>
+                        <strong>Location</strong>
+                        <p>Zone 8 Bonbon Opol Misamis Oriental</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <span>📞</span>
+                    <div>
+                        <strong>Phone</strong>
+                        <p>09XX XXX XXXX</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <span>🕐</span>
+                    <div>
+                        <strong>Business Hours</strong>
+                        <p>Monday - Saturday</p>
+                        <p>8:00 AM - 6:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+    <footer>
+        <div class="copyright">© 2026 Joy Prints & Crafts. All rights reserved. -BronDEV</div>
+    </footer>
+
+    <!-- =========================
+         PRODUCT MODAL
+    ========================= -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <button id="closeModal" class="close-btn">×</button>
+            <div class="modal-image">
+                <img id="modalImage" src="" alt="Product">
+            </div>
+            <div class="modal-info">
+                <span id="modalCategory" class="modal-category">Category</span>
+                <h2 id="modalName">Product Name</h2>
+                <p id="modalDescription">Product description.</p>
+                <div class="modal-details">
+                    <div>
+                        <strong>Material</strong>
+                        <span id="modalMaterial">-</span>
+                    </div>
+                    <div>
+                        <strong>Available Sizes</strong>
+                        <span id="modalSizes">-</span>
+                    </div>
+                </div>
+                <button id="inquireBtn" class="btn btn-primary inquire-btn">💬 Inquire About This Product</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
