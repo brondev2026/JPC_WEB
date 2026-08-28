@@ -1,3 +1,6 @@
 git add .
 git commit -m "Update website"
 git push
+
+
+//image size 1100 x 1400

@@ -5,21 +5,21 @@
 const products = [
     {
         id: 1,
-        name: 'Premium PVC ID',
-        category: 'ID Products',
-        desc: 'Durable PVC ID card with full-color print.',
-        material: 'PVC',
-        sizes: 'Standard (86x54mm)',
+        name: 'Sintra Trophies',
+        category: 'Trophies',
+        desc: 'High-quality custom trophies for any occasion.',
+        material: 'Sintra',
+        sizes: 'Various',
         images: [
-            'images/pvc-id.jpg',
-            'images/pvc-id-2.jpg',
-            'images/pvc-id-3.jpg'
+            'images/trophy/trophy1.jpg',
+            'images/trophy/trophy2.jpg',
+            'images/trophy/trophy3.jpg'
         ]
     },
 
     {
         id: 2,
-        name: 'Kawaii Sticker Pack',
+        name: 'Coming soon',
         category: 'Stickers',
         desc: 'Set of 10 cute waterproof stickers.',
         material: 'Vinyl',
@@ -39,9 +39,11 @@ const products = [
         material: 'Cotton',
         sizes: 'S-2XL',
         images: [
-            'images/tshirt.jpg',
-            'images/tshirt-2.jpg',
-            'images/tshirt-3.jpg'
+            'images/shirt/shirt1.jpg',
+            'images/shirt/shirt2.jpg',
+            'images/shirt/shirt3.jpg',
+            'images/shirt/shirt4.jpg',
+            'images/shirt/shirt5.jpg',
         ]
     },
 
@@ -53,10 +55,17 @@ const products = [
         material: 'Acrylic',
         sizes: '5x5 cm',
         images: [
-            'images/refmagnet.jpg',
-            'images/refmagnet-2.jpg',
-            'images/refmagnet-3.jpg',
-            'images/refmagnet-4.jpg'
+            'images/refmagnet/refmagnet.jpg',
+            'images/refmagnet/refmagnet2.jpg',
+            'images/refmagnet/refmagnet3.jpg',
+            'images/refmagnet/refmagnet4.jpg',
+            'images/refmagnet/refmagnet5.jpg',
+            'images/refmagnet/refmagnet6.jpg',
+            'images/refmagnet/refmagnet7.jpg',
+            'images/refmagnet/refmagnet8.jpg',
+            'images/refmagnet/refmagnet9.jpg',
+            'images/refmagnet/refmagnet10.jpg',
+            'images/refmagnet/refmagnet11.jpg',
         ]
     },
 
@@ -110,11 +119,33 @@ const products = [
         material: 'Acrylic',
         sizes: '5x5 cm',
         images: [
-            'images/keychain.jpg',
-            'images/keychain-2.jpg',
-            'images/keychain-3.jpg'
+            'images/keychain/keychain.jpg',
+            'images/keychain/keychain2.jpg',
+            'images/keychain/keychain3.jpg',
+            'images/keychain/keychain4.jpg',
+            'images/keychain/keychain5.jpg',
+            'images/keychain/keychain6.jpg',
+            'images/keychain/keychain7.jpg',
+            'images/keychain/keychain8.jpg',
+            'images/keychain/keychain9.jpg',
+            'images/keychain/keychain10.jpg',
+            'images/keychain/keychain11.jpg',
         ]
-    }
+    },
+
+        {
+        id: 9,
+        name: 'Premium PVC ID',
+        category: 'ID Products',
+        desc: 'Durable PVC ID card with full-color print.',
+        material: 'PVC',
+        sizes: 'Standard (86x54mm)',
+        images: [
+            'images/pvc-id.jpg',
+            'images/pvc-id-2.jpg',
+            'images/pvc-id-3.jpg'
+        ]
+    },
 ];
 
 
