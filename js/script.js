@@ -1,164 +1,763 @@
 // =========================
 // PRODUCT DATA
 // =========================
+
 const products = [
-    { id: 1, name: 'Premium PVC ID', category: 'ID Products', desc: 'Durable PVC ID card with full-color print.', material: 'PVC', sizes: 'Standard (86x54mm)', image: '🪪' },
-    { id: 2, name: 'Kawaii Sticker Pack', category: 'Stickers', desc: 'Set of 10 cute waterproof stickers.', material: 'Vinyl', sizes: '3-5 cm', image: '🎨' },
-    { id: 3, name: 'Custom T-Shirt', category: 'Apparel', desc: 'Soft cotton T-shirt with your design.', material: 'Cotton', sizes: 'S-2XL', image: '👕' },
-    { id: 4, name: 'Ref Magnet', category: 'Souvenirs', desc: 'Custom keychain or magnet with photo.', material: 'Acrylic', sizes: '5x5 cm', image: '🎁' },
-    { id: 5, name: 'Label Stickers', category: 'Labels', desc: 'Custom label stickers for jars, boxes.', material: 'Paper/Vinyl', sizes: 'various', image: '🏷️' },
-    { id: 6, name: 'ID Lanyard', category: 'ID Products', desc: 'Colorful lanyard with ID holder.', material: 'Polyester', sizes: '45 cm', image: '🪪' },
-    { id: 7, name: 'Floral Sticker Set', category: 'Stickers', desc: 'Beautiful floral sticker set.', material: 'Vinyl', sizes: '4-6 cm', image: '🎨' },
-    { id: 8, name: 'Key Chain', category: 'Souvenirs', desc: 'Custom keychain or magnet with photo.', material: 'Acrylic', sizes: '5x5 cm', image: '🎁' },
-    
+    {
+        id: 1,
+        name: 'Premium PVC ID',
+        category: 'ID Products',
+        desc: 'Durable PVC ID card with full-color print.',
+        material: 'PVC',
+        sizes: 'Standard (86x54mm)',
+        images: [
+            'images/pvc-id.jpg',
+            'images/pvc-id-2.jpg',
+            'images/pvc-id-3.jpg'
+        ]
+    },
+
+    {
+        id: 2,
+        name: 'Kawaii Sticker Pack',
+        category: 'Stickers',
+        desc: 'Set of 10 cute waterproof stickers.',
+        material: 'Vinyl',
+        sizes: '3-5 cm',
+        images: [
+            'images/stickers.jpg',
+            'images/stickers-2.jpg',
+            'images/stickers-3.jpg'
+        ]
+    },
+
+    {
+        id: 3,
+        name: 'Custom T-Shirt',
+        category: 'Apparel',
+        desc: 'Soft cotton T-shirt with your design.',
+        material: 'Cotton',
+        sizes: 'S-2XL',
+        images: [
+            'images/tshirt.jpg',
+            'images/tshirt-2.jpg',
+            'images/tshirt-3.jpg'
+        ]
+    },
+
+    {
+        id: 4,
+        name: 'Ref Magnet',
+        category: 'Souvenirs',
+        desc: 'Custom keychain or magnet with photo.',
+        material: 'Acrylic',
+        sizes: '5x5 cm',
+        images: [
+            'images/refmagnet.jpg',
+            'images/refmagnet-2.jpg',
+            'images/refmagnet-3.jpg',
+            'images/refmagnet-4.jpg'
+        ]
+    },
+
+    {
+        id: 5,
+        name: 'Label Stickers',
+        category: 'Labels',
+        desc: 'Custom label stickers for jars, boxes.',
+        material: 'Paper/Vinyl',
+        sizes: 'Various',
+        images: [
+            'images/labels.jpg',
+            'images/labels-2.jpg',
+            'images/labels-3.jpg'
+        ]
+    },
+
+    {
+        id: 6,
+        name: 'ID Lanyard',
+        category: 'ID Products',
+        desc: 'Colorful lanyard with ID holder.',
+        material: 'Polyester',
+        sizes: '45 cm',
+        images: [
+            'images/lanyard.jpg',
+            'images/lanyard-2.jpg',
+            'images/lanyard-3.jpg'
+        ]
+    },
+
+    {
+        id: 7,
+        name: 'Floral Sticker Set',
+        category: 'Stickers',
+        desc: 'Beautiful floral sticker set.',
+        material: 'Vinyl',
+        sizes: '4-6 cm',
+        images: [
+            'images/floral-stickers.jpg',
+            'images/floral-stickers-2.jpg',
+            'images/floral-stickers-3.jpg'
+        ]
+    },
+
+    {
+        id: 8,
+        name: 'Key Chain',
+        category: 'Souvenirs',
+        desc: 'Custom keychain or magnet with photo.',
+        material: 'Acrylic',
+        sizes: '5x5 cm',
+        images: [
+            'images/keychain.jpg',
+            'images/keychain-2.jpg',
+            'images/keychain-3.jpg'
+        ]
+    }
 ];
+
+
 
 // =========================
 // DOM ELEMENTS
 // =========================
+
 const grid = document.getElementById('productGrid');
+
 const searchInput = document.getElementById('searchInput');
+
 const categoryBtns = document.querySelectorAll('.category-btn');
+
 const modal = document.getElementById('productModal');
+
 const closeModalBtn = document.getElementById('closeModal');
-const modalImage = document.getElementById('modalImage');
+
 const modalCategory = document.getElementById('modalCategory');
+
 const modalName = document.getElementById('modalName');
+
 const modalDescription = document.getElementById('modalDescription');
+
 const modalMaterial = document.getElementById('modalMaterial');
+
 const modalSizes = document.getElementById('modalSizes');
+
 const darkBtn = document.getElementById('darkModeBtn');
+
 const menuBtn = document.getElementById('menuBtn');
+
 const navLinks = document.getElementById('navLinks');
 
+const inquireBtn = document.getElementById('inquireBtn');
+
+// Gallery elements
+const galleryTrack = document.getElementById('galleryTrack');
+
+const galleryDots = document.getElementById('galleryDots');
+
+const galleryPrev = document.getElementById('galleryPrev');
+
+const galleryNext = document.getElementById('galleryNext');
+
+
+// =========================
+// CURRENT CATEGORY
+// =========================
+
 let currentCategory = 'All';
+
+
+// =========================
+// GALLERY STATE
+// =========================
+
+let currentImages = [];
+
+let currentImageIndex = 0;
+
 
 // =========================
 // RENDER PRODUCTS
 // =========================
+
 function renderProducts(filter = '', category = 'All') {
+
     let filtered = products;
+
+
+    // Filter by category
     if (category !== 'All') {
-        filtered = filtered.filter(p => p.category === category);
-    }
-    if (filter.trim()) {
-        const term = filter.trim().toLowerCase();
-        filtered = filtered.filter(p =>
-            p.name.toLowerCase().includes(term) ||
-            p.category.toLowerCase().includes(term)
-        );
-    }
 
-    if (filtered.length === 0) {
-        grid.innerHTML = `<p style="grid-column:1/-1; text-align:center; color:#9b7a70; padding:40px;">No products found 🌸</p>`;
-        return;
-    }
+        filtered = filtered.filter(product => {
 
-    grid.innerHTML = filtered.map(p => `
-        <div class="product-card" data-id="${p.id}">
-            <div class="product-image">
-                <div style="display:flex;align-items:center;justify-content:center;height:100%;font-size:70px;background:#fae9e4;color:#754e44;">${p.image || '🖨️'}</div>
-            </div>
-            <div class="product-info">
-                <div class="product-category">${p.category}</div>
-                <h3>${p.name}</h3>
-                <p>${p.desc}</p>
-                <div class="product-bottom">
-                    <button class="view-btn" data-id="${p.id}">View</button>
-                </div>
-            </div>
-        </div>
-    `).join('');
+            return product.category === category;
 
-    // Attach view events
-    document.querySelectorAll('.view-btn').forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            e.stopPropagation();
-            const id = parseInt(this.dataset.id);
-            const product = products.find(p => p.id === id);
-            if (product) openModal(product);
         });
+
+    }
+
+
+    // Filter by search
+    if (filter.trim()) {
+
+        const term = filter.trim().toLowerCase();
+
+        filtered = filtered.filter(product => {
+
+            return (
+                product.name.toLowerCase().includes(term) ||
+                product.category.toLowerCase().includes(term) ||
+                product.desc.toLowerCase().includes(term)
+            );
+
+        });
+
+    }
+
+
+    // No products found
+    if (filtered.length === 0) {
+
+        grid.innerHTML = `
+            <div class="no-products">
+                <h3>No products found 🌸</h3>
+                <p>Try searching for another product.</p>
+            </div>
+        `;
+
+        return;
+
+    }
+
+
+    // Create product cards
+    grid.innerHTML = filtered.map(product => {
+
+        const thumbnail = product.images && product.images.length
+            ? product.images[0]
+            : 'images/JPC_logo.jpg';
+
+        return `
+
+            <div
+                class="product-card"
+                data-id="${product.id}"
+            >
+
+                <!-- PRODUCT IMAGE -->
+                <div class="product-image">
+
+                    <img
+                        src="${thumbnail}"
+                        alt="${product.name}"
+                        loading="lazy"
+                        onerror="this.src='images/JPC_logo.jpg'"
+                    >
+
+                </div>
+
+
+                <!-- PRODUCT INFORMATION -->
+                <div class="product-info">
+
+                    <div class="product-category">
+                        ${product.category}
+                    </div>
+
+                    <h3>
+                        ${product.name}
+                    </h3>
+
+                    <p>
+                        ${product.desc}
+                    </p>
+
+
+                    <div class="product-bottom">
+
+                        <button
+                            class="view-btn"
+                            data-id="${product.id}"
+                            type="button"
+                        >
+                            View
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        `;
+
+    }).join('');
+
+
+    // Add click events to View buttons
+    document.querySelectorAll('.view-btn').forEach(button => {
+
+        button.addEventListener('click', function(event) {
+
+            event.stopPropagation();
+
+            const id = parseInt(this.dataset.id);
+
+            const product = products.find(item => item.id === id);
+
+            if (product) {
+
+                openModal(product);
+
+            }
+
+        });
+
     });
+
+
+    // Make the entire card clickable
+    document.querySelectorAll('.product-card').forEach(card => {
+
+        card.addEventListener('click', function() {
+
+            const id = parseInt(this.dataset.id);
+
+            const product = products.find(item => item.id === id);
+
+            if (product) {
+
+                openModal(product);
+
+            }
+
+        });
+
+    });
+
 }
 
+
 // =========================
-// MODAL FUNCTIONS
+// OPEN MODAL
 // =========================
+
 function openModal(product) {
-    modalImage.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"%3E%3Crect width="200" height="200" fill="%23fae9e4"/%3E%3Ctext x="100" y="120" font-size="80" text-anchor="middle" fill="%23754e44"%3E' + encodeURIComponent(product.image || '🖨️') + '%3C/text%3E%3C/svg%3E';
+
+    // Set up gallery images for this product
+    currentImages = (product.images && product.images.length)
+        ? product.images
+        : ['images/JPC_logo.jpg'];
+
+    currentImageIndex = 0;
+
+    renderGallery();
+
+
+    // Set product information
     modalCategory.textContent = product.category;
+
     modalName.textContent = product.name;
+
     modalDescription.textContent = product.desc;
+
     modalMaterial.textContent = product.material || '—';
+
     modalSizes.textContent = product.sizes || '—';
+
+
+    // Show modal
     modal.classList.add('active');
+
+
+    // Prevent background scrolling
     document.body.style.overflow = 'hidden';
+
 }
+
+
+// =========================
+// CLOSE MODAL
+// =========================
 
 function closeModal() {
+
     modal.classList.remove('active');
+
     document.body.style.overflow = '';
+
 }
 
+
 // =========================
-// EVENT LISTENERS
+// RENDER GALLERY
 // =========================
-// Search
-searchInput.addEventListener('input', function() {
-    renderProducts(this.value, currentCategory);
-});
 
-// Category buttons
-categoryBtns.forEach(btn => {
-    btn.addEventListener('click', function() {
-        categoryBtns.forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
-        currentCategory = this.dataset.category;
-        renderProducts(searchInput.value, currentCategory);
-    });
-});
+function renderGallery() {
 
-// Modal close
-closeModalBtn.addEventListener('click', closeModal);
-modal.addEventListener('click', function(e) {
-    if (e.target === modal) closeModal();
-});
+    // Build one slide per image
+    galleryTrack.innerHTML = currentImages.map(src => {
 
-// Escape key to close modal
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && modal.classList.contains('active')) {
-        closeModal();
+        return `
+            <div class="gallery-slide">
+                <img
+                    src="${src}"
+                    alt="Product"
+                    onerror="this.src='images/JPC_logo.jpg'"
+                >
+            </div>
+        `;
+
+    }).join('');
+
+
+    // Reset position to current index (no animation on open)
+    galleryTrack.style.transition = 'none';
+
+    galleryTrack.style.transform = `translateX(-${currentImageIndex * 100}%)`;
+
+    // Force reflow so the next transform change animates
+    void galleryTrack.offsetWidth;
+
+    galleryTrack.style.transition = '';
+
+
+    // Build dots
+    if (currentImages.length > 1) {
+
+        galleryDots.innerHTML = currentImages.map((_, i) => {
+
+            return `<span class="gallery-dot ${i === currentImageIndex ? 'active' : ''}" data-index="${i}"></span>`;
+
+        }).join('');
+
+        galleryDots.style.display = 'flex';
+
+    } else {
+
+        galleryDots.innerHTML = '';
+
+        galleryDots.style.display = 'none';
+
     }
-});
 
-// Dark mode
-darkBtn.addEventListener('click', function() {
-    document.body.classList.toggle('dark');
-    this.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
-});
 
-// Mobile menu
-menuBtn.addEventListener('click', function() {
-    navLinks.classList.toggle('active');
-    this.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
-});
+    // Hide arrows when there's only one image
+    const showArrows = currentImages.length > 1;
 
-// Close mobile menu on link click
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', function() {
-        navLinks.classList.remove('active');
-        menuBtn.textContent = '☰';
+    galleryPrev.style.display = showArrows ? 'flex' : 'none';
+
+    galleryNext.style.display = showArrows ? 'flex' : 'none';
+
+}
+
+
+// =========================
+// GO TO IMAGE (by index, wraps around)
+// =========================
+
+function goToImage(index) {
+
+    const total = currentImages.length;
+
+    if (total === 0) return;
+
+    currentImageIndex = (index + total) % total;
+
+    galleryTrack.style.transform = `translateX(-${currentImageIndex * 100}%)`;
+
+    document.querySelectorAll('.gallery-dot').forEach((dot, i) => {
+
+        dot.classList.toggle('active', i === currentImageIndex);
+
     });
+
+}
+
+
+// =========================
+// GALLERY ARROW CLICKS
+// =========================
+
+galleryPrev.addEventListener('click', function(event) {
+
+    event.stopPropagation();
+
+    goToImage(currentImageIndex - 1);
+
 });
 
-// Inquire button in modal
-document.getElementById('inquireBtn').addEventListener('click', function() {
-    const name = modalName.textContent;
-    alert(`💬 Thank you for your interest in "${name}"!\n\nPlease contact us via Messenger or Facebook for pricing and orders.`);
+galleryNext.addEventListener('click', function(event) {
+
+    event.stopPropagation();
+
+    goToImage(currentImageIndex + 1);
+
+});
+
+
+// =========================
+// GALLERY DOT CLICKS
+// =========================
+
+galleryDots.addEventListener('click', function(event) {
+
+    if (event.target.classList.contains('gallery-dot')) {
+
+        goToImage(parseInt(event.target.dataset.index));
+
+    }
+
+});
+
+
+// =========================
+// KEYBOARD ARROWS (while modal open)
+// =========================
+
+document.addEventListener('keydown', function(event) {
+
+    if (!modal.classList.contains('active')) return;
+
+    if (event.key === 'ArrowLeft') {
+
+        goToImage(currentImageIndex - 1);
+
+    }
+
+    if (event.key === 'ArrowRight') {
+
+        goToImage(currentImageIndex + 1);
+
+    }
+
+});
+
+
+// =========================
+// TOUCH SWIPE SUPPORT (mobile)
+// =========================
+
+let touchStartX = 0;
+
+let touchEndX = 0;
+
+galleryTrack.addEventListener('touchstart', function(event) {
+
+    touchStartX = event.changedTouches[0].screenX;
+
+}, { passive: true });
+
+galleryTrack.addEventListener('touchend', function(event) {
+
+    touchEndX = event.changedTouches[0].screenX;
+
+    handleSwipe();
+
+}, { passive: true });
+
+function handleSwipe() {
+
+    const diff = touchStartX - touchEndX;
+
+    const threshold = 40; // minimum swipe distance in px
+
+    if (Math.abs(diff) < threshold) return;
+
+    if (diff > 0) {
+
+        // swiped left -> next image
+        goToImage(currentImageIndex + 1);
+
+    } else {
+
+        // swiped right -> previous image
+        goToImage(currentImageIndex - 1);
+
+    }
+
+}
+
+
+// =========================
+// SEARCH
+// =========================
+
+searchInput.addEventListener('input', function() {
+
+    renderProducts(
+        this.value,
+        currentCategory
+    );
+
+});
+
+
+// =========================
+// CATEGORY BUTTONS
+// =========================
+
+categoryBtns.forEach(button => {
+
+    button.addEventListener('click', function() {
+
+        // Remove active class
+        categoryBtns.forEach(btn => {
+
+            btn.classList.remove('active');
+
+        });
+
+
+        // Add active class
+        this.classList.add('active');
+
+
+        // Update category
+        currentCategory = this.dataset.category;
+
+
+        // Render products
+        renderProducts(
+            searchInput.value,
+            currentCategory
+        );
+
+    });
+
+});
+
+
+// =========================
+// CLOSE MODAL BUTTON
+// =========================
+
+closeModalBtn.addEventListener('click', function() {
+
     closeModal();
+
 });
 
+
 // =========================
-// INIT
+// CLOSE MODAL WHEN CLICKING OUTSIDE
 // =========================
+
+modal.addEventListener('click', function(event) {
+
+    if (event.target === modal) {
+
+        closeModal();
+
+    }
+
+});
+
+
+// =========================
+// ESCAPE KEY
+// =========================
+
+document.addEventListener('keydown', function(event) {
+
+    if (
+        event.key === 'Escape' &&
+        modal.classList.contains('active')
+    ) {
+
+        closeModal();
+
+    }
+
+});
+
+
+// =========================
+// DARK MODE
+// =========================
+
+darkBtn.addEventListener('click', function() {
+
+    document.body.classList.toggle('dark');
+
+
+    if (document.body.classList.contains('dark')) {
+
+        this.textContent = '☀️';
+
+    } else {
+
+        this.textContent = '🌙';
+
+    }
+
+});
+
+
+// =========================
+// MOBILE MENU
+// =========================
+
+menuBtn.addEventListener('click', function() {
+
+    navLinks.classList.toggle('active');
+
+
+    if (navLinks.classList.contains('active')) {
+
+        this.textContent = '✕';
+
+    } else {
+
+        this.textContent = '☰';
+
+    }
+
+});
+
+
+// =========================
+// CLOSE MOBILE MENU
+// WHEN CLICKING A LINK
+// =========================
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+
+    link.addEventListener('click', function() {
+
+        navLinks.classList.remove('active');
+
+        menuBtn.textContent = '☰';
+
+    });
+
+});
+
+
+// =========================
+// INQUIRE BUTTON
+// =========================
+
+inquireBtn.addEventListener('click', function() {
+
+    const name = modalName.textContent;
+
+
+    alert(
+        `💬 Thank you for your interest in "${name}"!\n\n` +
+        `Please contact us via Messenger or Facebook ` +
+        `for pricing and orders.`
+    );
+
+
+    closeModal();
+
+});
+
+
+// =========================
+// INITIALIZE PRODUCTS
+// =========================
+
 renderProducts();
