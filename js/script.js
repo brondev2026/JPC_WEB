@@ -13,21 +13,58 @@ const products = [
         images: [
             'images/trophy/trophy1.jpg',
             'images/trophy/trophy2.jpg',
-            'images/trophy/trophy3.jpg'
+            'images/trophy/trophy3.jpg',
+            'images/trophy/trophy4.jpg',
+            'images/trophy/trophy5.jpg',
+            'images/trophy/trophy6.jpg',
+            'images/trophy/trophy7.jpg',
+            'images/trophy/trophy8.jpg',
+            'images/trophy/trophy9.jpg',
+            'images/trophy/trophy10.jpg',
+            'images/trophy/trophy11.jpg',
+            'images/trophy/trophy12.jpg',
+            'images/trophy/trophy13.jpg',
+            'images/trophy/trophy14.jpg',
+            'images/trophy/trophy15.jpg',
+            'images/trophy/trophy16.jpg',
+            'images/trophy/trophy17.jpg',
+            'images/trophy/trophy18.jpg',
+            'images/trophy/trophy19.jpg',
+            'images/trophy/trophy20.jpg',
+            'images/trophy/trophy21.jpg',
+            'images/trophy/trophy22.jpg',
         ]
     },
 
     {
         id: 2,
-        name: 'Coming soon',
-        category: 'Stickers',
-        desc: 'Set of 10 cute waterproof stickers.',
+        name: 'Photo Tiles',
+        category: 'Photos',
+        desc: '---------',
         material: 'Vinyl',
         sizes: '3-5 cm',
         images: [
-            'images/stickers.jpg',
-            'images/stickers-2.jpg',
-            'images/stickers-3.jpg'
+            'images/phototiles/phototiles1.jpg',
+            'images/phototiles/phototiles2.jpg',
+            'images/phototiles/phototiles3.jpg',
+            'images/phototiles/phototiles4.jpg',
+            'images/phototiles/phototiles5.jpg',
+            'images/phototiles/phototiles6.jpg',
+            'images/phototiles/phototiles7.jpg',
+            'images/phototiles/phototiles8.jpg',
+            'images/phototiles/phototiles9.jpg',
+            'images/phototiles/phototiles10.jpg',
+            'images/phototiles/phototiles11.jpg',
+            'images/phototiles/phototiles12.jpg',
+            'images/phototiles/phototiles13.jpg',
+            'images/phototiles/phototiles14.jpg',
+            'images/phototiles/phototiles15.jpg',
+            'images/phototiles/phototiles16.jpg',
+            'images/phototiles/phototiles17.jpg',
+            'images/phototiles/phototiles18.jpg',
+            'images/phototiles/phototiles19.jpg',
+            'images/phototiles/phototiles20.jpg',
+            'images/phototiles/phototiles21.jpg',
         ]
     },
 
@@ -44,6 +81,18 @@ const products = [
             'images/shirt/shirt3.jpg',
             'images/shirt/shirt4.jpg',
             'images/shirt/shirt5.jpg',
+            'images/shirt/shirt6.jpg',
+            'images/shirt/shirt7.jpg',
+            'images/shirt/shirt8.jpg',
+            'images/shirt/shirt9.jpg',
+            'images/shirt/shirt10.jpg',
+            'images/shirt/shirt11.jpg',
+            'images/shirt/shirt12.jpg',
+            'images/shirt/shirt13.jpg',
+            'images/shirt/shirt14.jpg',
+            'images/shirt/shirt15.jpg',
+            'images/shirt/shirt16.jpg',
+            'images/shirt/shirt17.jpg',
         ]
     },
 
@@ -71,48 +120,20 @@ const products = [
 
     {
         id: 5,
-        name: 'Label Stickers',
-        category: 'Labels',
-        desc: 'Custom label stickers for jars, boxes.',
-        material: 'Paper/Vinyl',
-        sizes: 'Various',
-        images: [
-            'images/labels.jpg',
-            'images/labels-2.jpg',
-            'images/labels-3.jpg'
-        ]
-    },
-
-    {
-        id: 6,
         name: 'ID Lanyard',
         category: 'ID Products',
         desc: 'Colorful lanyard with ID holder.',
         material: 'Polyester',
         sizes: '45 cm',
         images: [
-            'images/lanyard.jpg',
-            'images/lanyard-2.jpg',
-            'images/lanyard-3.jpg'
+            'images/lanyard/lanyard1.jpg',
+            'images/lanyard/lanyard2.jpg',
+            'images/lanyard/lanyard3.jpg',
         ]
     },
 
     {
-        id: 7,
-        name: 'Floral Sticker Set',
-        category: 'Stickers',
-        desc: 'Beautiful floral sticker set.',
-        material: 'Vinyl',
-        sizes: '4-6 cm',
-        images: [
-            'images/floral-stickers.jpg',
-            'images/floral-stickers-2.jpg',
-            'images/floral-stickers-3.jpg'
-        ]
-    },
-
-    {
-        id: 8,
+        id: 6,
         name: 'Key Chain',
         category: 'Souvenirs',
         desc: 'Custom keychain or magnet with photo.',
@@ -134,7 +155,7 @@ const products = [
     },
 
         {
-        id: 9,
+        id: 7,
         name: 'Premium PVC ID',
         category: 'ID Products',
         desc: 'Durable PVC ID card with full-color print.',
