@@ -129,6 +129,8 @@ const products = [
             'images/lanyard/lanyard1.jpg',
             'images/lanyard/lanyard2.jpg',
             'images/lanyard/lanyard3.jpg',
+            'images/lanyard/lanyard4.jpg',
+            'images/lanyard/lanyard5.jpg',
         ]
     },
 
@@ -154,17 +156,78 @@ const products = [
         ]
     },
 
+
         {
         id: 7,
         name: 'Premium PVC ID',
         category: 'ID Products',
-        desc: 'Durable PVC ID card with full-color print.',
+        desc: '-------------------.',
         material: 'PVC',
         sizes: 'Standard (86x54mm)',
         images: [
-            'images/pvc-id.jpg',
-            'images/pvc-id-2.jpg',
-            'images/pvc-id-3.jpg'
+            'images/id_card/id_card1.png',
+        ]
+    },
+
+    {
+        id: 8,
+        name: 'Slub Glass',
+        category: 'Mug & Glassware',
+        desc: '-------------------.',
+        material: 'Mug',
+        sizes: 'Standard',
+        images: [
+            'images/mug/slubglass/slub1.jpg',
+            'images/mug/slubglass/slub2.jpg',
+            'images/mug/slubglass/slub3.jpg',
+            'images/mug/slubglass/slub4.jpg',
+            'images/mug/slubglass/slub5.jpg',
+            'images/mug/slubglass/slub6.jpg',
+            'images/mug/slubglass/slub7.jpg',
+            'images/mug/slubglass/slub8.jpg',
+            'images/mug/slubglass/slub9.jpg',
+            'images/mug/slubglass/slub10.jpg',
+            'images/mug/slubglass/slub11.jpg',
+            // 'images/mug/slubglass/slub12.jpg',
+        ]
+    },
+
+    {
+        id: 9,
+        name: 'Coffee Mug',
+        category: 'Mug & Glassware',
+        desc: '-------------------.',
+        material: 'Mug',
+        sizes: 'Standard',
+        images: [
+            'images/mug/cmug/cmug1.jpg',
+            'images/mug/cmug/cmug2.jpg',
+            'images/mug/cmug/cmug3.jpg',
+            'images/mug/cmug/cmug4.jpg',
+            'images/mug/cmug/cmug5.jpg',
+            'images/mug/cmug/cmug6.jpg',
+            'images/mug/cmug/cmug7.jpg',
+            'images/mug/cmug/cmug8.jpg',
+            'images/mug/cmug/cmug9.jpg',
+            'images/mug/cmug/cmug10.jpg',
+            'images/mug/cmug/cmug11.jpg',
+            'images/mug/cmug/cmug12.jpg',
+            'images/mug/cmug/cmug13.jpg',
+            'images/mug/cmug/cmug14.jpg',
+            'images/mug/cmug/cmug15.jpg',
+            'images/mug/cmug/cmug16.jpg',
+            'images/mug/cmug/cmug17.jpg',
+            'images/mug/cmug/cmug18.jpg',
+            'images/mug/cmug/cmug19.jpg',
+            'images/mug/cmug/cmug20.jpg',
+            'images/mug/cmug/cmug21.jpg',
+            'images/mug/cmug/cmug22.jpg',
+            'images/mug/cmug/cmug23.jpg',
+            'images/mug/cmug/cmug24.jpg',
+            'images/mug/cmug/cmug25.jpg',
+            'images/mug/cmug/cmug26.jpg',
+            'images/mug/cmug/cmug27.jpg',
+            'images/mug/cmug/cmug28.jpg',
         ]
     },
 ];

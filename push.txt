@@ -1,5 +1,5 @@
 git add .
-git commit -m "Update website"
+git commit -m "Update website 1.1"
 git push
 
 
